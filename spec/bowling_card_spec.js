@@ -63,4 +63,20 @@ describe('BowlingCard', function() {
       });
     });
 
+    describe ('turn total', function() {
+      it ('can total the score of a given turn', function() {
+        bowling_card.turn(10,0)
+        bowling_card.turn(10,0)
+        bowling_card.turn(7,2)
+        expect(bowling_card.turn_total(2)).toEqual(9)
+      });
+
+      it ('can total the score of a given turn', function() {
+        bowling_card.turn(10,0)
+        bowling_card.turn(10,0)
+        bowling_card.turn(7,2)
+        expect(bowling_card.turn_total(0)).toEqual(27)
+      });
+    });
+
 });
